@@ -1,0 +1,113 @@
+/* Estilos generales */
+/* Header */
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  @import 'variables';
+  @import 'cosas-de-sass-2';
+  
+  h1 {
+    @extend.estilo-h1;
+  }
+  
+  nav {
+    background: rgb(10, 174, 170);
+    background: linear-gradient(
+      90deg,
+      rgba(10, 174, 170, 1) 0%,
+      rgba(45, 194, 191, 1) 25%,
+      rgba(80, 215, 213, 1) 50%,
+      rgba(114, 235, 234, 1) 75%,
+      rgba(100, 250, 168, 1) 100%,
+      rgba(149, 255, 255, 1) 100%
+    );
+  
+    .navegador a {
+      color: rgb(0, 0, 0) !important;
+      font-size: 20px;
+      @extend.estilo-h1;
+    }
+  }
+  
+  .logo-y-titulo {
+    display: flex;
+    flex-direction: column;
+    height: 15rem;
+    padding-bottom: 1rem;
+  
+    .logo {
+      width: 150px;
+    }
+  }
+  /* Mixins */
+  .main-index {
+    @include espacios-align($spa1, 0, left);
+  }
+  
+  /* Footer */
+  
+  footer {
+    /*  border-top: solid 15px orange; */
+    /*     background: rgb(2, 0, 36);
+      background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(152, 233, 244, 1) 0%, rgba(84, 240, 199, 1) 48%, rgba(100, 250, 168, 1) 100%, rgba(0, 209, 251, 1) 100%); */
+    background: rgb(10, 174, 170);
+    background: linear-gradient(
+      90deg,
+      rgba(10, 174, 170, 1) 0%,
+      rgba(45, 194, 191, 1) 25%,
+      rgba(80, 215, 213, 1) 50%,
+      rgba(114, 235, 234, 1) 75%,
+      rgba(100, 250, 168, 1) 100%,
+      rgba(149, 255, 255, 1) 100%
+    );
+  
+    .img-footer {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  
+  .diseñador {
+    font-family: 'Patrick Hand', cursive !important;
+    background-color: black;
+    text-align: center;
+    padding: 0.5rem 0rem;
+  
+    a {
+      color: rgb(219, 202, 202);
+    }
+  }
+  
+  /* Termina cambios generales CSS */
+  
+  /* Main-index */
+  .info-util-index {
+    padding: $spa1;
+    background-color: $c-fondo;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  
+    h3 {
+      display: inline-block;
+    }
+  
+    img {
+      width: 300px;
+      border-radius: 5%;
+    }
+  }
+  
+  @import 'productos';
+  
+  @import 'personalizado';
+  
+  @import 'preguntas-frecuentes';
+  
+  @import 'contacto';
+  
+  @import 'media_y_efectos';
+  

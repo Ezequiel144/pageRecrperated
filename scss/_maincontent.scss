@@ -1,0 +1,149 @@
+
+main{
+    .content{
+        .content-home{
+            .home{
+                position: relative;
+                .homecontent-text{
+                    position: absolute;
+                    top: 45%;
+                    transform: translateY(-45%);
+                    left: 20%;
+                    transform: translateX(-20%);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content:space-between;
+                }
+                
+                &_text{
+                    color: $color-semitone;
+                    font-size: 1.2rem;
+                    text-shadow: 1px 1px 1px black;
+                    text-transform: uppercase;
+                }
+                .text-title{
+                    color: $color-semitone;
+                    font-size: 2.5rem;
+                    text-shadow: 1px 1px 1px black;
+                    text-transform: uppercase;
+                }
+                .titleanimation{
+                    color: yellow;
+                    font-size: 1.6rem;
+                    text-shadow: 1px 1px 1px black;
+                    text-transform: uppercase;
+                    display: block;
+                    border-right: 4px solid;
+                    white-space: nowrap;
+                    animation: typing 3s steps(25) infinite alternate, blink 0.7s infinite step-end alternate;
+                    overflow: hidden;
+                    width: 100%;
+                    /* letter-spacing: 5px; */
+                } 
+                @keyframes typing {
+                    from{width: 0}
+                }
+                @keyframes blink {
+                    50%{border-color:transparent}
+                }
+                .content-img{
+                    width: 100%;
+                    .img-fluid{
+                        object-fit: cover;
+                        height: 750px;
+                    }
+                }
+            }
+        }
+        .content-home-part2{
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            background-color: $color-base;
+            color: $color-letter;
+            .text_descrip{
+               font-weight: 100;
+               display: flex;
+               flex-direction: column;
+               justify-content: center;
+               .title-descrip{
+                text-transform: uppercase;
+                font-weight: 700;
+                letter-spacing: 4px;
+               }
+               /* border: 1px solid red; */
+            }   
+            .containerimg{
+                .containerimg_img{
+                    width: 100%;
+                    border-radius: 5px;
+                    box-shadow: 1px 1px 20px $color-semitone;
+                }
+            }
+        }
+        .content-service{
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            .card{
+                border: 1px solid $color-tone;
+                .card-body{
+                    .linkshop{
+                        display: block;
+                        margin: 0 auto;
+                        background-color: $color-tone;
+                        border: 0;
+                        text-transform: uppercase;
+                    }
+                    .liner{
+                        margin: 20px 0;
+                        width: 100%;
+                        border: 2px solid $color-semitone;
+                        border-radius: 10px;
+                    }
+                    .list{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 25px;
+                        list-style: none;
+                        padding: 10px;
+                        .list-link{
+                            display: flex;
+                            align-items: center;
+                            gap: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:650px) {
+    main{
+        .content{
+            .content-home-part2{
+               flex-direction: row;
+               .text_descrip{
+                /* font-size: 1.2rem; */
+               }
+            }
+        }
+    }
+}
+
+@media (min-width:900px) {
+    main{
+        .content{
+            .content-home-part2{
+               .text_descrip{
+                font-size: 1.2rem;
+               }
+            }
+        }
+    }
+}
+
